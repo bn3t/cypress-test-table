@@ -4,10 +4,13 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "antd/dist/antd.css";
+import ErrorBoundary from "./boundary";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
   </React.StrictMode>,
   document.getElementById("root")
 );
